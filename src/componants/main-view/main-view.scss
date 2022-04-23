@@ -1,0 +1,78 @@
+//MAIN View
+
+body{
+    color: bisque;
+    background: linear-gradient(to left, rgb(29, 28, 28) 10%, rgb(46, 45, 45) 30%, rgb(66, 66, 66) 45%, rgb(66, 66, 66) 60%, rgb(59, 57, 57) 75%);
+}
+
+img{
+    margin-left: 10%;
+    height: 375px;
+    width: 275px;
+    border-radius: 14px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.LogOut{
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -13px 15px 0px inset, rgba(0, 0, 0, 0.15) 0px -16px 15px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 12px 6px;
+}
+.btn.btn-danger:hover{
+   
+    position: absolute;
+    right: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    
+}
+.btn.btn-danger:focus{
+   
+    position: absolute;
+    right: 10px;
+    box-shadow: inset 1px 2px 3px rgb(48, 1, 1);;   
+}
+
+.btn.btn-link{
+    background-color: rgba(48, 47, 47, 0.721);
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -13px 15px 0px inset, rgba(0, 0, 0, 0.15) 0px -16px 15px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 12px 6px;
+    transition: .5s ease-in-out;
+}
+  
+.btn.btn-link:hover{
+    color: red;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    border: 1px solid rgb(78, 2, 2);
+    background-color: rgba(56, 54, 54, 0.548);
+    box-shadow: rgba(0, 0, 0, 0.27) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.25) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.26) 0px 2px 1px, rgba(0, 0, 0, 0.29) 0px 4px 2px, rgba(0, 0, 0, 0.29) 0px 8px 4px, rgba(0, 0, 0, 0.29) 0px 16px 8px, rgba(27, 27, 27, 0.8) 0px 32px 16px;
+    transition: .5s ease-in-out;
+  }
+
+  .btn{
+    font-family: 'Nunito', sans-serif;  
+    box-shadow: 1px 1px 2px rgb(0, 0, 0),
+    2px 2px 3px rgb(19, 18, 18);
+    transition: .5s ease-in-out;
+  }
+  .btn:hover{
+    color: red;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    border: 1px solid rgb(78, 2, 2);
+    background-color: rgba(56, 54, 54, 0.548);
+    box-shadow: rgba(0, 0, 0, 0.27) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.25) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.26) 0px 2px 1px, rgba(0, 0, 0, 0.29) 0px 4px 2px, rgba(0, 0, 0, 0.29) 0px 8px 4px, rgba(0, 0, 0, 0.29) 0px 16px 8px, rgba(27, 27, 27, 0.8) 0px 32px 16px;
+    transition: .5s ease-in-out;
+  }
+  
+  .btn:focus{
+  color: rgb(107, 166, 221);
+  box-shadow: 
+  inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+                transition: .5s ease-in-out;
+  }
+  
+  

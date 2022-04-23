@@ -1,0 +1,59 @@
+.Director-Card{
+    width: 230px;
+    height: fit-content;
+    font-family: 'Nunito', sans-serif;
+    background-color:rgb(71, 71, 71);
+    border: 1px solid rgba(17, 17, 17, 0.534);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 7px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: .4s ease-in-out;
+    transform-origin:left;
+    animation: ScaleIn 1s ease-in-out;
+}
+.Director-Card:Hover{
+    cursor: pointer;
+    // border: 2px solid rgba(23, 78, 141, 0.973);
+    transform: scale(1.01);
+    box-shadow: rgba(0, 0, 0, 0.27) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.25) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.46) 0px 2px 1px, rgba(0, 0, 0, 0.29) 0px 4px 2px, rgba(0, 0, 0, 0.29) 0px 8px 4px, rgba(0, 0, 0, 0.29) 0px 16px 8px, rgba(0, 0, 0, 0.29) 0px 32px 16px;
+}
+
+
+.Director-Title{
+    text-align: center;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.219);
+    margin-bottom: 5px;
+}
+
+.DirectorButton{
+    margin-left: 35%;
+}
+.Director-Image{
+    margin-left: 15%;
+    width: 150px;
+    height: 170px;
+}
+
+
+@keyframes ScaleIn {
+    0% {
+        transform: translate3d(0px, 0px, 0px) translateX(0%) scale(.01);
+        opacity: .1;
+    }
+
+    50% {
+        transform:  scale(.7) rotate3d(1, 1, 1, 45deg);
+        
+        opacity: .1;
+    }
+
+  
+    100% {
+      
+        transform: translate3d(inherit) translateX(inherit) scale(1.0);
+        opacity: .9;
+      }
+  }

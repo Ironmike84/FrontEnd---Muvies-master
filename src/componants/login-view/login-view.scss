@@ -1,0 +1,165 @@
+//LOGIN View
+
+
+input  {
+    width: 150px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 14pt;
+    color: chartreuse;
+    text-align: center;
+    background-color: rgb(22, 21, 21);
+    border: 0px inset black;
+    border-radius: 14px;
+    box-shadow: inset 1px 1px 3px black,
+                inset 2px 2px 3px black,
+                inset 3px 3px 4px rgba(15, 15, 15, 0.808);
+
+}
+button.btn.btn-dark.RegisterButton{
+  position: fixed;
+  top: 50px;
+  right: 10px;
+}
+.danger{
+    cursor: pointer;
+    border: 0px outset silver;
+    font-family: 'Dongle', sans-serif;
+    color: chartreuse;
+    background-color: rgb(14, 13, 13);
+    margin-top: 7px;
+    width: 75px;
+    margin-left: 40%;
+    border-radius: 14px;
+    box-shadow: 1px 1px 3px black,
+                2px 2px 3px black,
+                3px 3px 4px rgba(15, 15, 15, 0.808);
+}
+form{
+    margin-left: 40%;
+    margin-top: 50px;
+    padding: 15px;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(to left, rgb(54, 53, 53) 10%, rgb(26, 25, 25) 45%, rgb(34, 33, 33) 75%);
+    border: 1px outset rgba(46, 45, 45, 0.151);
+    border-radius: 15px;
+    height: fit-content;
+    width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.27) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.25) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.26) 0px 2px 1px, rgba(0, 0, 0, 0.29) 0px 4px 2px, rgba(0, 0, 0, 0.29) 0px 8px 4px, rgba(0, 0, 0, 0.29) 0px 16px 8px, rgba(0, 0, 0, 0.25) 0px 32px 16px;
+    animation: FadeIn 3s ease-in-out;
+}
+.log-out{
+
+        margin: 10px;
+}
+
+.form-text {
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #6c757d;
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: bisque;
+    background-color: rgba(17, 17, 17, 0.801);
+    background-clip: padding-box;
+    border: 1px solid #131313;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .form-control {
+      transition: 1s ease-in-out;
+    }
+  }
+  .form-control[type=file] {
+    overflow: hidden;
+  }
+  .form-control[type=file]:not(:disabled):not([readonly]) {
+    cursor: pointer;
+  }
+  .form-control:focus {
+    color: bisque;
+    background-color: rgb(27, 26, 26);
+    border-color: #6e0707a8;
+    outline: 0;
+    box-shadow: inset 1px 1px 3px black,
+    inset 2px 2px 3px black,
+    inset 3px 3px 4px rgba(15, 15, 15, 0.808);
+  }
+  .form-control::-webkit-date-and-time-value {
+    height: 1.5em;
+  }
+  .form-control::-moz-placeholder {
+    color: #6c757d;
+    opacity: 1;
+  }
+  .form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+  }
+  .form-control:disabled, .form-control[readonly] {
+    background-color: #0d0d0e;
+    opacity: 1;
+  }
+  .form-control::-webkit-file-upload-button {
+    padding: 0.375rem 0.75rem;
+    margin: -0.375rem -0.75rem;
+    -webkit-margin-end: 0.75rem;
+    margin-inline-end: 0.75rem;
+    color: #212529;
+    background-color: #0b0c0cd5;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: 1px;
+    border-radius: 0;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+
+  .btn{
+    margin: 7px;
+    font-family: 'Nunito', sans-serif;  
+    box-shadow: 1px 1px 2px rgb(0, 0, 0),
+    2px 2px 3px rgb(19, 18, 18);
+    transition: .5s ease-in-out;
+  }
+  .btn:hover{
+    color: red;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    border: 1px solid rgb(78, 2, 2);
+    background-color: rgba(56, 54, 54, 0.548);
+    box-shadow: rgba(0, 0, 0, 0.27) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.25) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.26) 0px 2px 1px, rgba(0, 0, 0, 0.29) 0px 4px 2px, rgba(0, 0, 0, 0.29) 0px 8px 4px, rgba(0, 0, 0, 0.29) 0px 16px 8px, rgba(27, 27, 27, 0.8) 0px 32px 16px;
+    transition: .5s ease-in-out;
+  }
+  
+  .btn:focus{
+  color: rgb(107, 166, 221);
+  box-shadow: 
+  inset 2px 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: .5s ease-in-out;
+  }
+  
+  @keyframes FadeIn {
+    0% {
+         opacity: 0;
+    }
+    100% {
+        opacity: 1;
+      }
+  }

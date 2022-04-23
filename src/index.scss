@@ -1,0 +1,121 @@
+body{
+  font-family: 'Dongle', sans-serif;
+}
+
+.card-text{
+  font-size: 14pt;
+  font-family: 'Dongle', sans-serif;
+}
+
+.card-title.h5{
+  text-align: center;
+  color: rgb(0, 132, 255);
+  font-size: 26pt;
+  font-family: 'Dongle', sans-serif;
+  background-color: transparent;
+}
+
+.MuVies{
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  Color: bisque;
+  background: linear-gradient(to left, rgb(66, 65, 65) 10%, rgb(39, 39, 39) 45%, rgb(26, 25, 25) 75%, rgb(73, 72, 72) 100%);
+  width: 100vw;
+  padding: 7px;
+
+  box-shadow:
+  inset 1px 1px 2px black,
+  inset 2px 2px 3px black,
+  inset 3px 3px 4px rgba(63, 62, 62, 0.877),
+  inset -1px -1px 2px black,
+  inset -2px -2px 3px black,
+  inset -3px -3px 4px rgba(37, 37, 37, 0.384);
+}
+
+.LogOut{
+  position: absolute;
+  right: 10px;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -13px 15px 0px inset, rgba(0, 0, 0, 0.15) 0px -16px 15px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 12px 6px;
+}
+
+.btn.btn-danger:hover{
+  position: absolute;
+  right: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+}
+
+.btn.btn-danger:focus{
+  position: absolute;
+  right: 10px;
+  box-shadow: inset 1px 2px 3px rgb(48, 1, 1);;   
+}
+
+
+.btn-dark{
+  background-color: rgba(48, 47, 47, 0.721);
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -13px 15px 0px inset, rgba(0, 0, 0, 0.15) 0px -16px 15px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 12px 6px;
+  transition: .5s ease-in-out;
+}
+.btn-dark:hover{
+  color: red;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  border: 1px solid rgb(78, 2, 2);
+  background-color: rgba(56, 54, 54, 0.548);
+  box-shadow: rgba(0, 0, 0, 0.27) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.25) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.26) 0px 2px 1px, rgba(0, 0, 0, 0.29) 0px 4px 2px, rgba(0, 0, 0, 0.29) 0px 8px 4px, rgba(0, 0, 0, 0.29) 0px 16px 8px, rgba(27, 27, 27, 0.8) 0px 32px 16px;
+  transition: .5s ease-in-out;
+}
+
+.btn.btn-dark:focus{
+  color: rgb(107, 166, 221);
+  box-shadow: 
+  inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: .5s ease-in-out;
+}
+
+.btn.btn-link{
+  background-color: rgba(48, 47, 47, 0.721);
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -13px 15px 0px inset, rgba(0, 0, 0, 0.15) 0px -16px 15px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 12px 6px;
+  transition: .5s ease-in-out;
+}
+
+.btn.btn-link:hover{
+  color: red;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  border: 1px solid rgb(78, 2, 2);
+  background-color: rgba(56, 54, 54, 0.548);
+  box-shadow: rgba(0, 0, 0, 0.27) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.25) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.26) 0px 2px 1px, rgba(0, 0, 0, 0.29) 0px 4px 2px, rgba(0, 0, 0, 0.29) 0px 8px 4px, rgba(0, 0, 0, 0.29) 0px 16px 8px, rgba(27, 27, 27, 0.8) 0px 32px 16px;
+  transition: .5s ease-in-out;
+}
+
+.btn{
+  background-color: rgba(48, 47, 47, 0.721);
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -13px 15px 0px inset, rgba(0, 0, 0, 0.15) 0px -16px 15px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 12px 6px;
+  transition: .5s ease-in-out;
+}
+.btn:hover{
+  color: red;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  border: 1px solid rgb(78, 2, 2);
+  background-color: rgba(56, 54, 54, 0.548);
+  box-shadow: rgba(0, 0, 0, 0.27) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.25) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.26) 0px 2px 1px, rgba(0, 0, 0, 0.29) 0px 4px 2px, rgba(0, 0, 0, 0.29) 0px 8px 4px, rgba(0, 0, 0, 0.29) 0px 16px 8px, rgba(27, 27, 27, 0.8) 0px 32px 16px;
+  transition: .5s ease-in-out;
+}
+
+.btn:focus{
+color: rgb(107, 166, 221);
+box-shadow: 
+inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+              transition: .5s ease-in-out;
+}
+
