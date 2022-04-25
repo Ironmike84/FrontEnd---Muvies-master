@@ -95,7 +95,7 @@ class MainView extends React.Component {
 
         {/* <Route exact path={"/"} render={()=>{<LoginView onLoggedIn={user => this.onLoggedIn(user)}/>}}/> */}
         <Route path={"/Movies"} render={()=><MoviesView user={user} token={token} movies={movies}/> }/>
-        <Route path={"/Directors"} render={()=><DirectorView user={user} token={token}/>}/>
+        <Route path={"/directors"} render={()=><DirectorView user={user} token={token}/>}/>
         <Route path={"/Profile"} render={()=><ProfileView user={user} token={token} userInfo={userInfo}/>}/>
         <Route path={"/Register"} render={() =><RegistrationView user={user} token={token} onLoggedIn={user => this.onLoggedIn(user)}/>} />
     

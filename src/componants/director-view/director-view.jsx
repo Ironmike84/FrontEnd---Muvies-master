@@ -23,7 +23,7 @@ setSelectedDirector(newSelectedDirector) {
   });
 }
 
-componentDidMount() {
+componentWillMount() {
   axios.get(`https://muvies-app.herokuapp.com/Directors`, {
       headers: { Authorization: `Bearer ${this.state.Token}`}
   })
