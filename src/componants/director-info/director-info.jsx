@@ -2,10 +2,12 @@ import React, {useState} from 'react'
 
 import {Button} from 'react-bootstrap'
 import { Prev } from 'react-bootstrap/esm/PageItem'
+import { useHistory } from "react-router-dom";
+
 import './Director-Info.scss'
 function DirectorInfo({Director, onBackClick}) {
-
-    const [ DirectorMovies, SetDirectorMovies ] = useState(Director.Movies)
+  let history = useHistory();
+    // const [ DirectorMovies, SetDirectorMovies ] = useState(Director.Movies)
 
 
   return (
@@ -18,9 +20,8 @@ function DirectorInfo({Director, onBackClick}) {
         <div>Death: {Director.Death}</div>
         <div className='Title'>Bio:</div>
         <div>{Director.Bio}</div>
-       Director Movies: {DirectorMovies.map((movie)=>(<div key={movie._id}>{movie.Title}</div>))}
-       <button className='btn btn-link DirectorInfoButton'  onClick={() => { onBackClick(null); }}>Back</button>
-       <button onClick={()=>{history.back()}}> History Back</button>
+       {/* Director Movies: {DirectorMovies.map((movie)=>(<div key={movie._id}>{movie.Title}</div>))} */}
+        <button className='btn btn-link DirectorInfoButton' onClick={()=>{history.goBack()}}>Back</button>
     </div>
 
   )

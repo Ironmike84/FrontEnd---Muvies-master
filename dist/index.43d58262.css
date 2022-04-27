@@ -159,8 +159,8 @@ form {
 
 .NavBar {
   width: 85vw;
-  background-color: #0000009a;
-  border: 1px outset #504e4e;
+  background: linear-gradient(.25turn, #3e3e5098, #171817a4, #3e3e5098);
+  border: 1px outset #96969991;
   border-radius: 5px;
   flex-flow: wrap;
   justify-content: space-evenly;
@@ -237,7 +237,8 @@ form {
 
 body {
   color: bisque;
-  background: linear-gradient(to left, #1d1c1c 10%, #2e2d2d 30%, #424242 45% 60%, #3b3939 75%);
+  background-image: url("Movies.dc8e6636.jpeg");
+  background-size: cover;
 }
 
 img {
@@ -318,10 +319,10 @@ img {
 .Card-Body {
   cursor: pointer;
   width: 350px;
-  height: 570px;
+  height: fit-content;
   color: #fff;
   transform-origin: 0;
-  background-color: #0000002b;
+  background-color: #3e3e5098;
   margin: 20px;
   transition: all .6s ease-in-out;
   animation: slidedown 1s ease-in-out;
@@ -330,9 +331,9 @@ img {
 
 .Card-Body:hover {
   width: 350px;
-  height: 570px;
+  height: fit-content;
   color: #fff;
-  background-color: #0000002b;
+  background-color: #606086cb;
   margin: 20px;
   box-shadow: inset 0 -23px 25px #00000045, inset 0 -36px 30px #00000040, inset 0 -79px 40px #0003, 0 2px 1px #00000042, 0 4px 2px #0000004a, 0 8px 4px #0000004a, 0 16px 8px #0000004a, 0 32px 16px #00000040;
 }
@@ -372,8 +373,8 @@ img {
 
 .movie-view {
   color: bisque;
-  background-color: "rgba(0, 0, 0, 0.17)";
   width: 400px;
+  background-color: #3e3e50e4;
   border: 1px outset #b9b6b633;
   border-radius: 14px;
   margin: 6px;
@@ -503,7 +504,7 @@ img {
   width: 230px;
   height: fit-content;
   transform-origin: 0;
-  background-color: #474747;
+  background-color: #3e3e50e4;
   border: 1px solid #1118;
   border-radius: 5px;
   margin: 7px;
@@ -603,13 +604,13 @@ hr {
 .profile-card {
   cursor: pointer;
   text-align: center;
-  width: 250px;
-  height: 400px;
+  width: 270px;
+  height: fit-content;
   transform-origin: 0;
-  background-color: #474747;
+  background-color: #3e3e50e4;
   border: 1px outset #00000041;
   border-radius: 5px;
-  margin-left: 150px;
+  margin-left: 38%;
   padding: 5px;
   font-family: Nunito, sans-serif;
   transition: all .4s ease-in-out;
@@ -618,7 +619,7 @@ hr {
 }
 
 .profile-card:hover {
-  background-color: #474747;
+  background-color: #3e3e50fe;
   transform: scale(1.04);
   box-shadow: inset 0 -23px 25px #00000045, inset 0 -36px 30px #00000040, inset 0 -79px 40px #0003, 0 2px 1px #00000042, 0 4px 2px #0000004a, 0 8px 4px #0000004a, 0 16px 8px #0000004a, 0 32px 16px #0000004a;
 }
@@ -658,6 +659,7 @@ hr {
 
 
 body {
+  background-color: #3e3e5098;
   font-family: Dongle, sans-serif;
 }
 
@@ -678,7 +680,7 @@ body {
   text-align: center;
   color: bisque;
   width: 100vw;
-  background: linear-gradient(to left, #424141 10%, #272727 45%, #1a1919 75%, #494848 100%);
+  background: linear-gradient(to left, #3e3e5098 10%, #0a0a0cbe 45%, #1c1c29e4 75%, #3e3e5098 100%);
   padding: 7px;
   font-family: Nunito, sans-serif;
   box-shadow: inset 1px 1px 2px #000, inset 2px 2px 3px #000, inset 3px 3px 4px #3f3e3ee0, inset -1px -1px 2px #000, inset -2px -2px 3px #000, inset -3px -3px 4px #25252562;
@@ -732,7 +734,7 @@ body {
   font-family: Nunito, sans-serif;
   text-decoration: none;
   transition: all .5s ease-in-out;
-  box-shadow: inset 0 -13px 15px #0000002b, inset 0 -16px 15px #00000026, inset 0 -79px 40px #0000001a, 0 2px 1px #0000000f, 0 4px 2px #00000017, 0 8px 4px #00000017, 0 16px 8px #00000017, 0 12px 6px #00000017;
+  box-shadow: inset 0 -3px 3px #0000002b, inset 0 -3px 3px #00000026, inset 0 -2px 2px #0000001a, 0 2px 1px #00000029, 0 2px 2px #00000030, 0 2px 2px #0000004a, 0 2px 2px #0000004a, 0 3px 3px #261e6e66;
 }
 
 .btn.btn-link:hover {
@@ -742,7 +744,7 @@ body {
   font-family: Nunito, sans-serif;
   text-decoration: none;
   transition: all .5s ease-in-out;
-  box-shadow: inset 0 -23px 25px #00000045, inset 0 -36px 30px #00000040, inset 0 -79px 40px #0003, 0 2px 1px #00000042, 0 4px 2px #0000004a, 0 8px 4px #0000004a, 0 16px 8px #0000004a, 0 32px 16px #1b1b1bcc;
+  box-shadow: inset 0 -23px 25px #00000045, inset 0 -36px 30px #00000040, inset 0 -79px 40px #0003, 0 2px 1px #00000042, 0 4px 2px #0000004a, 0 8px 4px #0000004a, 0 16px 8px #0000004a, 0 12px 16px #261e6e66;
 }
 
 .btn {
@@ -767,6 +769,45 @@ body {
   color: #6ba6dd;
   transition: all .5s ease-in-out;
   box-shadow: inset 1px 1px 1px 1px #00000080;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  width: 12px;
+  scrollbar-arrow-color: #a50a0a;
+  background: #494949;
+  border: 1px solid #00000083;
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px #000, inset 2px 2px 3px #1a19198e;
+}
+
+body::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  scrollbar-arrow-color: #a50a0a;
+  height: 32px;
+  width: 12px;
+  background-color: #252525c4;
+  border: 1px outset #1f1e1eaf;
+  border-radius: 7px;
+  box-shadow: inset 0 -23px 25px #0000002b, inset 0 -36px 30px #00000026, inset 0 -79px 40px #0000001a, 0 2px 1px #0000000f, 0 4px 2px #00000017, 0 8px 4px #00000017, 0 16px 8px #00000017, 0 32px 16px #00000017;
+}
+
+body::-webkit-scrollbar-button {
+  color: #000;
+  scrollbar-arrow-color: black;
+  scrollbar-track-color: #131313;
+  scrollbar-3dlight-color: #444;
+  background-color: #222;
+}
+
+body::-webkit-scrollbar-corner {
+  color: #000;
+  content: arrow;
+  background-color: #222;
 }
 
 /*# sourceMappingURL=index.43d58262.css.map */

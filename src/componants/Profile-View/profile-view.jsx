@@ -1,6 +1,7 @@
 //MAIN View
 import axios from 'axios';
 import React from 'react';
+import UsersImage from '../Images/user.png'
 import './profile-view.scss'
 class ProfileView extends React.Component {
 constructor(props){
@@ -46,7 +47,7 @@ componentDidMount() {
 }
 
 render(){
-const { UsersName, UsersImage, UsersEmail } = this.state;
+const { UsersName, UsersEmail } = this.state;
 
   return(
     <div>

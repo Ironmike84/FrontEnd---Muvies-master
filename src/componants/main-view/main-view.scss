@@ -2,7 +2,9 @@
 
 body{
     color: bisque;
-    background: linear-gradient(to left, rgb(29, 28, 28) 10%, rgb(46, 45, 45) 30%, rgb(66, 66, 66) 45%, rgb(66, 66, 66) 60%, rgb(59, 57, 57) 75%);
+    // background: linear-gradient(to left, rgba(62, 62, 80, 0.896) 10%, rgba(62, 62, 80, 0.796) 30%, rgba(62, 62, 80, 0.596) 45%, rgba(62, 62, 80, 0.796) 60%, rgba(62, 62, 80, 0.896) 75%);
+    background-image: url('../Images/Movies.jpeg');
+    background-size: cover;
 }
 
 img{
@@ -74,5 +76,4 @@ img{
 
                 transition: .5s ease-in-out;
   }
-  
   

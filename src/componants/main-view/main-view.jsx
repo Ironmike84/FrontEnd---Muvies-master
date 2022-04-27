@@ -96,7 +96,7 @@ componentDidCatch(token){
               this.setState({
                   Directors: response.data,
               });
-              sessionStorage.setItem('DirectorsArray', response.data)   
+        
           })
 }
 
@@ -116,11 +116,11 @@ componentDidCatch(token){
       if (!user)
        return <LoginView token={token} onLoggedIn={user => this.onLoggedIn(user)}/>}} />
         <Route path="/Movies" render={()=><MoviesView user={user} token={token} movies={movies}/> }/>
-        <Route path="/Directors" render={()=><DirectorView user={user} token={token}/>}/>;
-        <Route path="/Profile" render={()=><ProfileView user={user} token={token} userInfo={userInfo}/>}/>;
-        <Route exact path="/Genre/:Name" render={({match}) => <GenreView genre={movies.find((movie) => movie.Genre === match.params.Name )}/>} />
+        <Route path="/Directors" render={()=><DirectorView user={user} token={token}/>}/>
+        <Route path="/Profile" render={()=><ProfileView user={user} token={token} userInfo={userInfo}/>}/>
+        <Route exact path="/Genre/:Name" render={({match}) => <GenreView movies={movies} user={user} Genre={match.params.Name}/>} />
         <Route path="/Register" render={() => <RegistrationView user={user} token={token} onLoggedIn={user => this.onLoggedIn(user)}/>} />
-        <Route path="/Director/:Name" render={({match}) => <DirectorInfo user={user} token={token} Director={Directors.find((Director)=>Director.Name === match.params.name)}/>}></Route>
+        <Route path="/Director/:Name" render={({match}) => <DirectorInfo user={user} token={token} Director={Directors.find((Director)=>Director.Name === match.params.Name)}/>}></Route>
         <Route path="/Movie/:Title" render={({match}) => <MovieView user={user} token={token} movie={movies.find((movie) => movie.Title === match.params.Title)}/>}/>
      </>
     )
