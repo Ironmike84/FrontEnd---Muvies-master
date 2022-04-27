@@ -16,7 +16,7 @@ class MyFlixApplication extends React.Component {
         <div className='MuVies'>MuVies-App</div>
         <MainView />
       </Router>
-    );
+    )
   }
 }
 

@@ -10,23 +10,18 @@ import MovieView from '../movie-view/movie-view'
         super(props);
         this.state = {
           user:null,
+          Movie:props.Movie,
           movies: [],
           LoggedInMovies:[],
           selectedMovie: null,
           user: props.user,
-          token: props.token,
-          Token:null,
-          User:null
+          token: localStorage.getItem('token'),
+          Token: localStorage.getItem('token'), 
+          User:null,
+          Mounted: false
         };
       }
-    
-      componentWillReceiveProps(){
-        let myToken = localStorage.getItem('token');
-        let myUser = localStorage.getItem('user');
-        this.setState({Token: myToken})
-        this.setState({User:myUser})
-      }
-    
+      
 
     setSelectedMovie(newSelectedMovie) {
         this.setState({
@@ -35,21 +30,21 @@ import MovieView from '../movie-view/movie-view'
       }
 
     componentDidMount() {
-        axios.get(`https://muvies-app.herokuapp.com/Movies`, {
-            headers: { Authorization: `Bearer ${this.state.token}`}
+        axios.get(`https://salty-badlands-90222.herokuapp.com/Movies`, {
+            headers: { Authorization: `Bearer ${localStorage.getItem('token')}`}
         })
             .then(response => {
                 this.setState({
-                    movies: response.data
-                    
+                    movies: response.data,
+                    Mounted: true
                 });
-                
             })
             .catch(function (error) {
                 console.log(error);
             });
     }
 
+    
 render(){
 
 const { movies, selectedMovie, token, user } = this.state;
@@ -57,8 +52,6 @@ const { movies, selectedMovie, token, user } = this.state;
     return (
   <>
   <hr></hr>
-       <Route exact path="/Movies" render={() => {
-        return(
           <Row className="main-view justify-content-md-center">
         {selectedMovie
         ? (
@@ -73,13 +66,6 @@ const { movies, selectedMovie, token, user } = this.state;
         ))
       }
       </Row>
-)}} />
-                 <Route path={"/Movies/:Title"} render={({match}) =>{<MovieView user={user} token={token} movie={movies.find(movie => movie.Title === match.params.Title)}/>}}/>
-          
-
-    
-
-
     </>
     )
   }

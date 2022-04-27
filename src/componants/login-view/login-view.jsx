@@ -39,7 +39,7 @@ export function LoginView(props) {
     const isReq = validate();
     if(isReq) {
       /* Send request to the server for authentication */
-      axios.post('https://muvies-app.herokuapp.com/login', {
+      axios.post('https://salty-badlands-90222.herokuapp.com/login', {
           UserName: UserName,
           Password: password
       })

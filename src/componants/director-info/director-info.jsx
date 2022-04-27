@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 
 import {Button} from 'react-bootstrap'
+import { Prev } from 'react-bootstrap/esm/PageItem'
 import './Director-Info.scss'
 function DirectorInfo({Director, onBackClick}) {
 
@@ -19,6 +20,7 @@ function DirectorInfo({Director, onBackClick}) {
         <div>{Director.Bio}</div>
        Director Movies: {DirectorMovies.map((movie)=>(<div key={movie._id}>{movie.Title}</div>))}
        <button className='btn btn-link DirectorInfoButton'  onClick={() => { onBackClick(null); }}>Back</button>
+       <button onClick={()=>{history.back()}}> History Back</button>
     </div>
 
   )

@@ -10,7 +10,10 @@ import MoviesView from '../movies/movies-view';
 import DirectorView from '../director-view/director-view';
 import ProfileView from '../Profile-View/profile-view'
 import RegistrationView from '../registration-view/registration-view'
+import DirectorInfo from '../director-info/director-info'
+import DirectorDetails from '../director-info/director-details'
 import MovieView from '../movie-view/movie-view'
+import GenreView from '../genre-view/genre-view'
 
 class MainView extends React.Component {
   constructor(props){
@@ -18,17 +21,17 @@ class MainView extends React.Component {
     this.state = {
         movies: [],
         user: null,
-        token: null,
+        token: localStorage.getItem('token'),
         userInfo: null,
-        Registered: false,
-        LoggedIn: false
+        LoggedIn: false,
+        Directors:[]
     };
     
   }
 
   //----------------------------------------------// GET Token
   componentDidMount(){
-    let accessToken = localStorage.getItem('token');
+    let accessToken = localStorage.getItem('token')
       this.getMovies(accessToken);
   }
 
@@ -41,9 +44,9 @@ class MainView extends React.Component {
       userInfo: authData.user
     })
     this.setState({LoggedIn:true})
-  
     localStorage.setItem('token', authData.token);
-    localStorage.setItem('user', authData.user.UserName);
+    localStorage.setItem('user', authData.user.UserName)
+    
     this.getMovies(authData.token);
     this.setState({token: authData.token})
   }
@@ -58,29 +61,48 @@ class MainView extends React.Component {
 }
 //--------------------------------------------------------------GET T
   getMovies(token) {
-      axios.get(`https://muvies-app.herokuapp.com/Movies`, {
+      axios.get(`https://salty-badlands-90222.herokuapp.com/Movies`, {
           headers: { Authorization: `Bearer ${token}`}
           })
           .then(response => {
               this.setState({
-                  movies: response.data
+                  movies: response.data,
+                  LoggedIn: true,
+                  user: localStorage.getItem('user')
               });
+              
+          }).then(
+            axios.get(`https://salty-badlands-90222.herokuapp.com/Directors`, {
+          headers: { Authorization: `Bearer ${token}`}
           })
+          .then(response => {
+              this.setState({
+                  Directors: response.data,
+
+              });
+              localStorage.setItem('DirectorsArray', response.data)
+              
+          })
+          )
           .catch(function (error) {
-              console.log(error);
+              console.log(error)
           });
         }
+componentDidCatch(token){
+  axios.get(`https://salty-badlands-90222.herokuapp.com/Directors`, {
+          headers: { Authorization: `Bearer ${token}`}
+          })
+          .then(response => {
+              this.setState({
+                  Directors: response.data,
+              });
+              sessionStorage.setItem('DirectorsArray', response.data)   
+          })
+}
 
-    Register(e){
-      e.preventDefault();
-      this.setState({Registered: true})
-
-    }
 
       render(props) {
-      const { user, token, userInfo, movies, LoggedIn} = this.state;
-      
-      // if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)}/>;
+      const { user, token, userInfo, movies, LoggedIn, Directors} = this.state
       
       return (
       <>
@@ -89,18 +111,19 @@ class MainView extends React.Component {
       <NavBar user={user}/>
       <h5>Welcome {user}!</h5></div>: <div>Please Log In...</div> }
       </div>
-
-      <Route exact path={"/"} render={() => {
-      if (!user) return <LoginView token={token} onLoggedIn={user => this.onLoggedIn(user)}/>}} />
-
-        {/* <Route exact path={"/"} render={()=>{<LoginView onLoggedIn={user => this.onLoggedIn(user)}/>}}/> */}
-        <Route path={"/Movies"} render={()=><MoviesView user={user} token={token} movies={movies}/> }/>
-        <Route path={"/directors"} render={()=><DirectorView user={user} token={token}/>}/>
-        <Route path={"/Profile"} render={()=><ProfileView user={user} token={token} userInfo={userInfo}/>}/>
-        <Route path={"/Register"} render={() =><RegistrationView user={user} token={token} onLoggedIn={user => this.onLoggedIn(user)}/>} />
-    
-      </>
-    );
+      
+      <Route exact path="/" render={() => {
+      if (!user)
+       return <LoginView token={token} onLoggedIn={user => this.onLoggedIn(user)}/>}} />
+        <Route path="/Movies" render={()=><MoviesView user={user} token={token} movies={movies}/> }/>
+        <Route path="/Directors" render={()=><DirectorView user={user} token={token}/>}/>;
+        <Route path="/Profile" render={()=><ProfileView user={user} token={token} userInfo={userInfo}/>}/>;
+        <Route exact path="/Genre/:Name" render={({match}) => <GenreView genre={movies.find((movie) => movie.Genre === match.params.Name )}/>} />
+        <Route path="/Register" render={() => <RegistrationView user={user} token={token} onLoggedIn={user => this.onLoggedIn(user)}/>} />
+        <Route path="/Director/:Name" render={({match}) => <DirectorInfo user={user} token={token} Director={Directors.find((Director)=>Director.Name === match.params.name)}/>}></Route>
+        <Route path="/Movie/:Title" render={({match}) => <MovieView user={user} token={token} movie={movies.find((movie) => movie.Title === match.params.Title)}/>}/>
+     </>
+    )
   }
 }
 

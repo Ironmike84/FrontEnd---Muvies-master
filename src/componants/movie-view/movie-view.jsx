@@ -2,11 +2,12 @@
 import React from 'react';
 import axios from 'axios'
 import './movie-view.scss';
+import { Prev } from 'react-bootstrap/esm/PageItem';
 class MovieView extends React.Component {
 constructor(props){
   super(props)
   this.state={
-    token: props.token,
+    token: localStorage.getItem('token'),
     movies:[],
     Token:null,
     User:null
@@ -64,7 +65,7 @@ componentDidMount(){
           <span className="label">Cast: </span>
           <span className="value">{movie.Cast}</span>
         </div>
-        <button className='btn btn-link Movie-Btn'  onClick={() => { onBackClick(null); }}>Back</button>
+        <button className='btn btn-link Movie-Btn'  onClick={() => { history.back(Prev) }}>Back</button>
      </div>
       
     );

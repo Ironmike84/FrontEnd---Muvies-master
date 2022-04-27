@@ -12,7 +12,7 @@ constructor(props){
   this.state={
     Directors:[],
     selectedDirector: null,
-    Token: props.token
+    Token: localStorage.getItem('token')
   }
   this.setSelectedDirector= this.setSelectedDirector.bind(this)
 }
@@ -23,9 +23,11 @@ setSelectedDirector(newSelectedDirector) {
   });
 }
 
+
+
 componentWillMount() {
-  axios.get(`https://muvies-app.herokuapp.com/Directors`, {
-      headers: { Authorization: `Bearer ${this.state.Token}`}
+  axios.get(`https://salty-badlands-90222.herokuapp.com/Directors`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}`}
   })
       .then(response => {
           this.setState({

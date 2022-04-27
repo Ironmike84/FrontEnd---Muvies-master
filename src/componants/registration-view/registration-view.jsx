@@ -53,7 +53,7 @@ const handleSubmit = (e) => {
     e.preventDefault();
     const isReq = validate();
     if (isReq){
-        axios.post(`https://muvies-app.herokuapp.com/Users/NewUser/${UserName}`, {
+        axios.post(`https://salty-badlands-90222.herokuapp.com/Users/NewUser/${UserName}`, {
             _id: Date.now(),
             UserName: UserName,
             Password: password,
