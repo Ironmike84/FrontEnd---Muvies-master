@@ -68,8 +68,6 @@ const handleSubmit = (e) => {
             setIsRegistered(true)
             alert('Registration Successful, Please Login');
             SetData(data)
-            // // window.open('/', '_self'); 
-            //     props.onLoggedIn(data);
         }).then( response => 
         axios.post('https://muvies-app.herokuapp.com/login', {
        UserName: UserName,
@@ -92,10 +90,10 @@ const handleSubmit = (e) => {
 
         return (
             <>
-            <div>
+            <div className='RegistrationView'>
                 {isRegistered ? <LoginView user={user} token={Token} onLoggedIn={user => this.onLoggedIn(user)}/>: <div>Please Register...</div>}
             <Container>
-            <Row className='mt-5'>
+            <Row>
                 <Col md={12}>
                     <Form>
                         <h3>Sign Up</h3>
