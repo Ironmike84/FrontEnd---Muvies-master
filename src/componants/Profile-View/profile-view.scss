@@ -1,23 +1,18 @@
 .profile-card{
     cursor: pointer;
     text-align: center;
-    width: 270px;
+    width: 600px;
     height: fit-content;
     font-family: 'Nunito', sans-serif;
     background-color: rgba(62, 62, 80, 0.896);
     border: 1px outset rgba(0, 0, 0, 0.253);
     border-radius: 5px;
     padding: 5px;
-    margin-left: 38%;
+    margin-left: 28%;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     transition: .4s ease-in-out;
     transform-origin:left;
     animation: slidein 1s ease-in-out;
-}
-.profile-card:hover{
-    background-color: rgba(62, 62, 80, 0.996);
-    transform: scale(1.04);
-    box-shadow: rgba(0, 0, 0, 0.27) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.25) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.2) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.26) 0px 2px 1px, rgba(0, 0, 0, 0.29) 0px 4px 2px, rgba(0, 0, 0, 0.29) 0px 8px 4px, rgba(0, 0, 0, 0.29) 0px 16px 8px, rgba(0, 0, 0, 0.29) 0px 32px 16px;
 }
 
 .card-title{
@@ -29,18 +24,88 @@
 }
 
 .card-image{
+    text-align: center;
+    margin-left: 0px;
     width: 150px;
     height: 150px;
 }
-
-.Movie-List{
-    margin-left: 7%;
-    width: 200px;
-    height: 150px;
-    border: 2px groove rgb(100, 97, 97); 
+.card-image-large{
+   position: absolute;
+    top: 10%;
+    left: 10%;
+    width: initial;
+    height: initial;
 }
 
+.Movie-List{
+    margin: 15px;
+    width: 95%;
+    height:fit-content;
+    border-radius: 5px;
+    border: 2px groove rgba(76, 76, 78, 0.562); 
+}
+.FavMovie{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px outset rgba(62, 62, 80, 0.896);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    margin: 5px;
+}
+.FavMovieHide{
+    display: none;
+}
 
+.FavTitle{
+    margin-left: 22%;
+    text-align: center;
+   
+}
+.FavGenre{
+    color: orangered;
+    margin-left: 3%;
+    text-align: center;
+}
+
+.TitleBar{
+    padding: 5px;
+  background: linear-gradient(0.25turn, #31333377, #4b55b1c9, #312d2d79);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+
+}
+.Title{ 
+    border-radius: 6px;
+}
+
+.title{
+    text-shadow: 1px 1px 2px black;
+    width: 20%;
+}
+.Genre{
+    text-shadow: 1px 1px 2px black;
+    width: 20%;
+}
+
+a{
+    color: rgb(14, 107, 214);
+    font-weight: Bold;
+    text-shadow: 1px 1px 2px black,
+                 2px 2px 3px black;
+    text-decoration: none;
+}
+
+.Value{
+    background-color: rgba(67, 69, 161, 0.082);
+}
+
+button.btn{
+    color: whitesmoke;
+}
 
 @keyframes slidein {
     0% {

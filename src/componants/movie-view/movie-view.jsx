@@ -9,21 +9,53 @@ constructor(props){
   this.state={
     token: localStorage.getItem('token'),
     movies:[],
-    Token:null,
-    User:null
+    Token:localStorage.getItem('token'),
+    User:localStorage.getItem('user'),
+    movie: props.movie,
+    FavMovie:null,
   }
-
+this.SaveFav = this.SaveFav.bind(this);
 }
     
-componentDidMount(){
-  let myToken = localStorage.getItem('token');
-  let myUser = localStorage.getItem('user');
-  this.setState({Token: myToken})
-  this.setState({User:myUser})
+PushFavorite(){
+  var axios = require('axios');
+  var data = JSON.stringify({
+    "_id": this.state.movie._id,
+    "Title": this.state.movie.Title,
+    "Genre": this.state.movie.Genre
+  });
+  
+  var config = {
+    method: 'post',
+    url: `https://salty-badlands-90222.herokuapp.com/Favorites/${localStorage.getItem('user')}`,
+    headers: { 
+      'Authorization': `Bearer ${localStorage.getItem('token')}`, 
+      'Content-Type': 'application/json'
+    },
+    data : data
+  };
+  
+  axios(config)
+  .then(function (response) {
+    console.log(JSON.stringify(response.data));
+    alert('Favorite Added!')
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
 }
 
+SaveFav(props){
+this.setState({FavMovie: {_id: this.state.movie._id, Title: this.state.movie.Title, Genre: this.state.movie.Genre }})
+
+this.PushFavorite()
+
+}
+
+
   render() {
-    const { movie, onBackClick } = this.props;
+    const { movie } = this.props;
 
     return (
        <div className="movie-view">
@@ -66,6 +98,8 @@ componentDidMount(){
           <span className="value">{movie.Cast}</span>
         </div>
         <button className='btn btn-link Movie-Btn'  onClick={() => { history.back(Prev) }}>Back</button>
+        <button className='btn btn-link' onClick={()=>{this.SaveFav()}}>Add +</button>
+        {/* <button className='btn btn-link' onClick={()=>{this.PushFavorite()}}>Push +</button> */}
      </div>
       
     );

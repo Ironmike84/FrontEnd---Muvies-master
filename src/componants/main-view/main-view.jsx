@@ -14,6 +14,7 @@ import DirectorInfo from '../director-info/director-info'
 import DirectorDetails from '../director-info/director-details'
 import MovieView from '../movie-view/movie-view'
 import GenreView from '../genre-view/genre-view'
+import UpdateView from '../Update/update-veiw'
 
 class MainView extends React.Component {
   constructor(props){
@@ -26,7 +27,6 @@ class MainView extends React.Component {
         LoggedIn: false,
         Directors:[]
     };
-    
   }
 
   //----------------------------------------------// GET Token
@@ -46,7 +46,6 @@ class MainView extends React.Component {
     this.setState({LoggedIn:true})
     localStorage.setItem('token', authData.token);
     localStorage.setItem('user', authData.user.UserName)
-    
     this.getMovies(authData.token);
     this.setState({token: authData.token})
   }
@@ -69,8 +68,7 @@ class MainView extends React.Component {
                   movies: response.data,
                   LoggedIn: true,
                   user: localStorage.getItem('user')
-              });
-              
+              }); 
           }).then(
             axios.get(`https://salty-badlands-90222.herokuapp.com/Directors`, {
           headers: { Authorization: `Bearer ${token}`}
@@ -78,10 +76,8 @@ class MainView extends React.Component {
           .then(response => {
               this.setState({
                   Directors: response.data,
-
               });
-              localStorage.setItem('DirectorsArray', response.data)
-              
+              localStorage.setItem('DirectorsArray', response.data) 
           })
           )
           .catch(function (error) {
@@ -96,10 +92,7 @@ componentDidCatch(token){
               this.setState({
                   Directors: response.data,
               });
-        
-          })
-}
-
+          })}
 
       render(props) {
       const { user, token, userInfo, movies, LoggedIn, Directors} = this.state
@@ -122,6 +115,7 @@ componentDidCatch(token){
         <Route path="/Register" render={() => <RegistrationView user={user} token={token} onLoggedIn={user => this.onLoggedIn(user)}/>} />
         <Route path="/Director/:Name" render={({match}) => <DirectorInfo user={user} token={token} Director={Directors.find((Director)=>Director.Name === match.params.Name)}/>}></Route>
         <Route path="/Movie/:Title" render={({match}) => <MovieView user={user} token={token} movie={movies.find((movie) => movie.Title === match.params.Title)}/>}/>
+        <Route path="/Users/Update/" render={({match}) => <UpdateView user={user} token={token} UserName={match.params.UserName}/>}/>
      </>
     )
   }

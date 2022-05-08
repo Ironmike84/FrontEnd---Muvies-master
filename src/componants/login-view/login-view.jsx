@@ -18,18 +18,18 @@ export function LoginView(props) {
   const validate = () => {
     let isReq = true;
     if(!UserName){
-     setUsernameErr('Username Required');
-     isReq = false;
+    setUsernameErr('Username Required');
+    isReq = false;
     }else if(UserName.length < 2){
-     setUsernameErr('Username must be 2 characters long');
-     isReq = false;
+    setUsernameErr('Username must be 2 characters long');
+    isReq = false;
     }
     if(!password){
-     setPasswordErr('Password Required');
-     isReq = false;
+    setPasswordErr('Password Required');
+    isReq = false;
     }else if(password.length < 6){
-     setPassword('Password must be 6 characters long');
-     isReq = false;
+    setPassword('Password must be 6 characters long');
+    isReq = false;
     }
     return isReq;
 }
@@ -50,9 +50,7 @@ export function LoginView(props) {
           window._open();
   
       })
-      .catch(e => {
-        alert('User does not Exist Please try again...')
-      });
+    
     }
   };
 
