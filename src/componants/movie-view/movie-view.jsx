@@ -48,15 +48,11 @@ PushFavorite(){
 
 SaveFav(props){
 this.setState({FavMovie: {_id: this.state.movie._id, Title: this.state.movie.Title, Genre: this.state.movie.Genre }})
-
 this.PushFavorite()
-
 }
-
 
   render() {
     const { movie } = this.props;
-
     return (
        <div className="movie-view">
         <div className="movie-poster">
@@ -97,7 +93,7 @@ this.PushFavorite()
           <span className="label">Cast: </span>
           <span className="value">{movie.Cast}</span>
         </div>
-        <button className='btn btn-link Movie-Btn'  onClick={() => { history.back(Prev) }}>Back</button>
+        <button className='btn btn-link Movie-Btn'  onClick={() => { history.back(); location.reload() }}>Back</button>
         <button className='btn btn-link' onClick={()=>{this.SaveFav()}}>Add +</button>
         {/* <button className='btn btn-link' onClick={()=>{this.PushFavorite()}}>Push +</button> */}
      </div>

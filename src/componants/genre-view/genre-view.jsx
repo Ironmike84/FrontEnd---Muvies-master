@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import {Row, Col } from 'react-bootstrap'
 import { Button } from 'react-bootstrap';
 import axios from 'axios';
@@ -21,6 +22,7 @@ constructor(props){
         SelectRomance: false,
         Comedy:[],
         SelectComedy: false,
+        SciFi:[],
         SelectedMovies:[]
 
         
@@ -28,10 +30,11 @@ constructor(props){
     this.setSelectedMovie = this.setSelectedMovie.bind(this);
     this.SetSelectedGenre = this.SetSelectedGenre.bind(this);
     this.GetGenres = this.GetGenres.bind(this);
+    this.GenreButton = this.GenreButton.bind(this);
 
 }
 
-componentDidCatch(){
+componentWillMount(){
   axios.get(`https://salty-badlands-90222.herokuapp.com/Genre/Action`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}`}
           })
@@ -64,8 +67,16 @@ componentDidCatch(){
                         this.setState({
                             Comedy: response.data,
                         })
-                      })
-          )))}
+                      }).then(
+                        axios.get(`https://salty-badlands-90222.herokuapp.com/Genre/Sci-Fi`, {
+                          headers: { Authorization: `Bearer ${localStorage.getItem('token')}`}
+                          })
+                          .then(response => {
+                              this.setState({
+                                  SciFi: response.data,
+                              })
+                            })
+          ))))}
 
 componentDidMount(){
   axios.get(`https://salty-badlands-90222.herokuapp.com/Genre/${this.state.Genre}`, {
@@ -86,33 +97,46 @@ setSelectedMovie(newSelectedMovie) {
 
 SetSelectedGenre(e){
 this.setState({SelectedGenre: e.target.value})
-
 this.GetGenre()
-
-
 }
 
 GetGenres(){
   let Action = this.state.movies.find(({Genre})=> Genre === 'Action')
   console.log(Action)
- 
 }
 
 
- 
+GenreButton(e){
+
+this.setState({SelectedGenre: e.target.value})
+axios.get(`https://salty-badlands-90222.herokuapp.com/Genre/${this.state.SelectedGenre}`, {
+    headers: { Authorization: `Bearer ${localStorage.getItem('token')}`}
+    })
+    .then(response => {
+        this.setState({
+            SelectedMovies: response.data,
+        })
+        
+})
+}
   render() {
 
-    const { movies,Drama, Action, selectedMovie, SelectAction, SelectDrama, SelectedMovies, Genre } = this.state;
+    const {SelectedGenre,Drama, Action, selectedMovie, SelectAction, SelectDrama, SelectedMovies, Genre } = this.state;
 
   return (
     <div>
-      <h3>{Genre}</h3>
+      <h3>{SelectedGenre}</h3>
+      <Link to={'/Genre/Drama'}><Button value={"Drama"} onClick={(e)=>{this.GenreButton(e)}}>Drama</Button></Link>
+      <Link to='/Genre/Comedy'><Button value={"Comedy"} onClick={(e)=>{this.GenreButton(e)}}>Comedy</Button></Link>
+      <Link to ='/Genre/Action'><Button value={"Action"} onClick={(e)=>{this.GenreButton(e)}}>Action</Button></Link>
+      <Link to='/Genre/Romance'><Button  value={"Romance"} onClick={(e)=>{this.GenreButton(e)}}>Romance</Button></Link>
+      <Link to='/Genre/Sci-Fi'><Button  value={"Sci-Fi"} onClick={(e)=>{this.GenreButton(e)}}>Sci-Fi</Button></Link>
       <hr></hr>
       <Row>
         {selectedMovie
         ? (
         <Col md={4}>
-          <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
+          <MovieView movie={selectedMovie} onBackClick={() => { history.back() }} />
         </Col>
         )
         : SelectedMovies.map(movie => (

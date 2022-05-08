@@ -91,7 +91,7 @@ const handleSubmit = (e) => {
             <Row>
                 <Col md={12}>
                     <Form>
-                        <h3>Sign Up</h3>
+                        <h3>Edit Profile Info</h3>
 {/* ------// USERNAME \\-------------------------------------------------------------- */}
                         <Form.Group controlId='formUsername' className='reg-form-inputs'>
                             <Form.Label>Username:</Form.Label>
