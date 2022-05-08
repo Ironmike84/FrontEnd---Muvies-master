@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Row, Col, Button, Container, Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
 import '../registration-view/registration-view.scss'
 
 function UpdateView(props){
@@ -32,21 +31,21 @@ function UpdateView(props){
 const validate = () => {
     let isReq = true;
     if(!UserName){
-     setUsernameErr('Username Required');
-     isReq = false;
+        setUsernameErr('Username Required');
+        isReq = false;
     }else if(UserName.length < 2){
-     setUsernameErr('Username must be 2 characters long');
-     isReq = false;
+        setUsernameErr('Username must be 2 characters long');
+        isReq = false;
     }
     if(!password){
-     setPasswordErr('Password Required');
-     isReq = false;
+        setPasswordErr('Password Required');
+        isReq = false;
     }if(password.length < 6){
-     setPassword('Password must be 6 characters long');
-     isReq = false;
+        setPassword('Password must be 6 characters long');
+        isReq = false;
     }else if(email.indexOf('@')=== -1){
-    setEmailErr('Must Include @ Symbol');
-    isReq = false;
+        setEmailErr('Must Include @ Symbol');
+        isReq = false;
 }
 return isReq;
 }
@@ -69,18 +68,18 @@ const handleSubmit = (e) => {
             SetData(data)
             console.log(Data)
         })
-   .then(response =>{
-       const data = response.data;
-       console.log(data.token);
-       SetToken(data.token);
-       setUser(data.user.UserName);
+    .then(response =>{
+        const data = response.data;
+        console.log(data.token);
+        SetToken(data.token);
+        setUser(data.user.UserName);
         props.onLoggedIn(data)
-   })
+        })
         .catch(response =>{ 
             console.error(response);
             alert('Unable to Update!!!');
         })
-      }
+        }
     }
 
 
@@ -143,7 +142,8 @@ UpdateView.propTypes = {
         Name: PropTypes.string.isRequired,
         Username: PropTypes.string.isRequired,
         Password: PropTypes.string.isRequired,
-        Email: PropTypes.string.isRequired
+        Email: PropTypes.string.isRequired,
+        ImagePath: PropTypes.string.isRequired,
     })
 };
 

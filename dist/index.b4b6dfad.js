@@ -36765,7 +36765,6 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _reactBootstrap = require("react-bootstrap");
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _reactRouterDom = require("react-router-dom");
 var _registrationViewScss = require("../registration-view/registration-view.scss");
 var _s = $RefreshSig$();
 function UpdateView(props) {
@@ -36850,7 +36849,7 @@ function UpdateView(props) {
                                     children: "Edit Profile Info"
                                 }, void 0, false, {
                                     fileName: "src/componants/Update/update-veiw.jsx",
-                                    lineNumber: 94,
+                                    lineNumber: 93,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Group, {
@@ -36861,7 +36860,7 @@ function UpdateView(props) {
                                             children: "Username:"
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 97,
+                                            lineNumber: 96,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Control, {
@@ -36872,20 +36871,20 @@ function UpdateView(props) {
                                             placeholder: "Enter Username..."
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 98,
+                                            lineNumber: 97,
                                             columnNumber: 29
                                         }, this),
                                         values.usernameErr && /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                             children: values.usernameErr
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 100,
+                                            lineNumber: 99,
                                             columnNumber: 56
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/componants/Update/update-veiw.jsx",
-                                    lineNumber: 96,
+                                    lineNumber: 95,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Group, {
@@ -36896,7 +36895,7 @@ function UpdateView(props) {
                                             children: "Password:"
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 104,
+                                            lineNumber: 103,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Control, {
@@ -36907,20 +36906,20 @@ function UpdateView(props) {
                                             placeholder: "Enter Password..."
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 105,
+                                            lineNumber: 104,
                                             columnNumber: 29
                                         }, this),
                                         values.passwordErr && /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                             children: values.passwordErr
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 107,
+                                            lineNumber: 106,
                                             columnNumber: 56
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/componants/Update/update-veiw.jsx",
-                                    lineNumber: 103,
+                                    lineNumber: 102,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Group, {
@@ -36931,7 +36930,7 @@ function UpdateView(props) {
                                             children: "E-Mail:"
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 111,
+                                            lineNumber: 110,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Control, {
@@ -36942,20 +36941,20 @@ function UpdateView(props) {
                                             placeholder: "Enter E-Mail..."
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 112,
+                                            lineNumber: 111,
                                             columnNumber: 29
                                         }, this),
                                         values.emailErr && /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                             children: values.emailErr
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 114,
+                                            lineNumber: 113,
                                             columnNumber: 53
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/componants/Update/update-veiw.jsx",
-                                    lineNumber: 110,
+                                    lineNumber: 109,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Group, {
@@ -36966,7 +36965,7 @@ function UpdateView(props) {
                                             children: "Birthday:"
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 118,
+                                            lineNumber: 117,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Control, {
@@ -36977,13 +36976,13 @@ function UpdateView(props) {
                                             placeholder: "Enter Birthdate..."
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 119,
+                                            lineNumber: 118,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/componants/Update/update-veiw.jsx",
-                                    lineNumber: 117,
+                                    lineNumber: 116,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Group, {
@@ -36994,7 +36993,7 @@ function UpdateView(props) {
                                             children: "UserImage:"
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 124,
+                                            lineNumber: 123,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Control, {
@@ -37005,13 +37004,13 @@ function UpdateView(props) {
                                             placeholder: "Enter Avatar URL..."
                                         }, void 0, false, {
                                             fileName: "src/componants/Update/update-veiw.jsx",
-                                            lineNumber: 125,
+                                            lineNumber: 124,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/componants/Update/update-veiw.jsx",
-                                    lineNumber: 123,
+                                    lineNumber: 122,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Button, {
@@ -37023,38 +37022,38 @@ function UpdateView(props) {
                                     children: "Submit"
                                 }, void 0, false, {
                                     fileName: "src/componants/Update/update-veiw.jsx",
-                                    lineNumber: 129,
+                                    lineNumber: 128,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("hr", {}, void 0, false, {
                                     fileName: "src/componants/Update/update-veiw.jsx",
-                                    lineNumber: 130,
+                                    lineNumber: 129,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/componants/Update/update-veiw.jsx",
-                            lineNumber: 93,
+                            lineNumber: 92,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "src/componants/Update/update-veiw.jsx",
-                        lineNumber: 92,
+                        lineNumber: 91,
                         columnNumber: 17
                     }, this)
                 }, void 0, false, {
                     fileName: "src/componants/Update/update-veiw.jsx",
-                    lineNumber: 91,
+                    lineNumber: 90,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "src/componants/Update/update-veiw.jsx",
-                lineNumber: 90,
+                lineNumber: 89,
                 columnNumber: 13
             }, this)
         }, void 0, false, {
             fileName: "src/componants/Update/update-veiw.jsx",
-            lineNumber: 89,
+            lineNumber: 88,
             columnNumber: 13
         }, this)
     }, void 0, false);
@@ -37066,7 +37065,8 @@ UpdateView.propTypes = {
         Name: _propTypesDefault.default.string.isRequired,
         Username: _propTypesDefault.default.string.isRequired,
         Password: _propTypesDefault.default.string.isRequired,
-        Email: _propTypesDefault.default.string.isRequired
+        Email: _propTypesDefault.default.string.isRequired,
+        ImagePath: _propTypesDefault.default.string.isRequired
     })
 };
 exports.default = UpdateView;
@@ -37078,6 +37078,6 @@ $RefreshReg$(_c, "UpdateView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","axios":"jo6P5","react-bootstrap":"3AD9A","prop-types":"7wKI2","react-router-dom":"cHIiW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../registration-view/registration-view.scss":"1EJvn"}],"1EJvn":[function() {},{}],"lJZlQ":[function() {},{}]},["kn9T2","1SYPb","d8Dch"], "d8Dch", "parcelRequire78fc")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","axios":"jo6P5","react-bootstrap":"3AD9A","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../registration-view/registration-view.scss":"1EJvn"}],"1EJvn":[function() {},{}],"lJZlQ":[function() {},{}]},["kn9T2","1SYPb","d8Dch"], "d8Dch", "parcelRequire78fc")
 
 //# sourceMappingURL=index.b4b6dfad.js.map
